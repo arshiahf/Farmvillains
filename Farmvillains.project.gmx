@@ -5,9 +5,17 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Cow Down">
+      <sprite>sprites\Walk_Down</sprite>
+      <sprite>sprites\Face_Down</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <rooms name="rooms">
+    <room>rooms\Starting_Pasture</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
