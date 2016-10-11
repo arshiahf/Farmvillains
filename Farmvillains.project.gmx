@@ -8,7 +8,6 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
     <sprites name="Cow Down">
       <sprite>sprites\Walk_Down</sprite>
       <sprite>sprites\Face_Down</sprite>
