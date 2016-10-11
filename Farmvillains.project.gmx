@@ -8,17 +8,17 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-<<<<<<< HEAD
     <sprite>sprites\sprite0</sprite>
-=======
     <sprites name="Cow Down">
       <sprite>sprites\Walk_Down</sprite>
       <sprite>sprites\Face_Down</sprite>
     </sprites>
->>>>>>> origin/master
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\Sneaking_Cow</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\Starting_Pasture</room>
   </rooms>
