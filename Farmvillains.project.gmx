@@ -8,15 +8,46 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
     <sprites name="Cow Down">
-      <sprite>sprites\Walk_Down</sprite>
-      <sprite>sprites\Face_Down</sprite>
+      <sprite>sprites\downWalk</sprite>
+      <sprite>sprites\downFace</sprite>
+    </sprites>
+    <sprites name="Detectors">
+      <sprite>sprites\detectorBasic</sprite>
+    </sprites>
+    <sprites name="Bullets">
+      <sprite>sprites\bulletSmall</sprite>
+    </sprites>
+    <sprites name="Collision">
+      <sprite>sprites\collisionHostileRegular</sprite>
+      <sprite>sprites\collisionAlertedRegular</sprite>
+      <sprite>sprites\exclamation</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\FireBullet.gml</script>
+    <script>scripts\Investigate.gml</script>
+    <script>scripts\FollowCow.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\cow1</object>
+    <objects name="Detectors">
+      <object>objects\detector1</object>
+    </objects>
+    <objects name="Collision Checkers">
+      <objects name="Detector 1 Checkers">
+        <object>objects\collisionAlertedRegular1</object>
+        <object>objects\collisionHostileRegular1</object>
+      </objects>
+      <object>objects\alertPoint</object>
+    </objects>
+    <object>objects\bulletSmall1</object>
+  </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
+    <room>rooms\Stealth_Test_Room</room>
     <room>rooms\Starting_Pasture</room>
   </rooms>
   <help>
