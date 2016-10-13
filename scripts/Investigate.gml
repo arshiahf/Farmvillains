@@ -1,16 +1,18 @@
-var cow = argument0;
-var detect = argument1;
-var alert = alertPoint;
-var inst;
-tempY = cow.y;
-instance_create(cow.x, cow.y, alert);
+var enemy = argument0;
+var alert = argument1;
 
-with detect
+with enemy
 {
-    if distance_to_point(alert.x, alert.y) > 5
-       {
-        move_towards_point(alert.x, alert.y, 5);
-        }
+    path_end();
+    if distance_to_object(alert) > 5
+    {
+        mp_potential_step(alert.x, alert.y, 5, false);
+        alarm[10] = 1;
+    }
+    else
+    {
+        alarm[10] = 0
+    }
 }
 
-detect.image_angle = point_direction(detect.x, detect.y, cow.x, cow.y) - 90;
+LookAt(alert, enemy);
