@@ -227,11 +227,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>playerGeneric</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>self</string>
           </argument>
           <argument>
             <kind>0</kind>

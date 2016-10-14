@@ -36,8 +36,6 @@
     <path>paths\stealthTestPath</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\FireBulletStraight.gml</script>
-    <script>scripts\PlayerInterface.gml</script>
     <scripts name="Sprite Manipulation">
       <script>scripts\Bury.gml</script>
       <script>scripts\LookAt.gml</script>
@@ -54,6 +52,12 @@
       <script>scripts\CollisionAlert.gml</script>
       <script>scripts\CollisionHostile.gml</script>
       <script>scripts\WallCollision.gml</script>
+    </scripts>
+    <scripts name="Projectiles">
+      <script>scripts\FireBulletStraight.gml</script>
+    </scripts>
+    <scripts name="Interface">
+      <script>scripts\PlayerInterface.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
