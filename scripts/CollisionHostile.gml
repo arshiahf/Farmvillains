@@ -1,14 +1,15 @@
-var cow = argument0;
-var detect = argument1;
+var player = argument0;
+var enemy = argument1;
+var
 
 with detect
 {
-    if collision_circle(detect.x, detect.y, 48, cow, true, true)
+    if collision_circle(enemy.x, enemy.y, 48, player, true, true)
     {
-        alarm_set(1, 10);
-        alarm_set(3, 300);
-        alarm_set(4, 1);
-        alarm_set(5, 0);
-        alarm_set(6, 0);
+        alarm[0] = 0
+        alarm[1] = 0
+        alarm[2] = 300;
+        alarm[3] = 10;
+        alarm[4] = 1;
     }
 }
