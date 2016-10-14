@@ -8,44 +8,109 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Cow Down">
-      <sprite>sprites\downWalk</sprite>
-      <sprite>sprites\downFace</sprite>
+    <sprites name="Livestock">
+      <sprites name="Cow">
+        <sprite>sprites\cowStand</sprite>
+        <sprite>sprites\cowWalk</sprite>
+        <sprite>sprites\cowDie</sprite>
+        <sprite>sprites\cowShooting</sprite>
+      </sprites>
     </sprites>
-    <sprites name="Detectors">
-      <sprite>sprites\detectorBasic</sprite>
+    <sprites name="Enemies">
+      <sprite>sprites\Basic_Detector</sprite>
+      <sprites name="Cops">
+        <sprites name="People">
+          <sprites name="Male"/>
+          <sprites name="Female"/>
+        </sprites>
+        <sprites name="Equipment"/>
+      </sprites>
+      <sprites name="Military">
+        <sprites name="People">
+          <sprites name="Male">
+            <sprites name="Army"/>
+            <sprites name="Air Force"/>
+            <sprites name="Marines"/>
+            <sprites name="Navy"/>
+          </sprites>
+          <sprites name="Female">
+            <sprites name="Army"/>
+            <sprites name="Air Force"/>
+            <sprites name="Marines"/>
+            <sprites name="Navy"/>
+          </sprites>
+        </sprites>
+        <sprites name="Equipment"/>
+      </sprites>
     </sprites>
-    <sprites name="Bullets">
-      <sprite>sprites\bulletSmall</sprite>
+    <sprites name="Ordinance">
+      <sprites name="Bullets">
+        <sprite>sprites\Bullet1</sprite>
+      </sprites>
     </sprites>
     <sprites name="Collision">
-      <sprite>sprites\collisionHostileRegular</sprite>
-      <sprite>sprites\collisionAlertedRegular</sprite>
+      <sprite>sprites\collisionWall</sprite>
+    </sprites>
+    <sprites name="Alerts">
       <sprite>sprites\exclamation</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
-  <paths name="paths"/>
+  <backgrounds name="background">
+    <background>background\stealthTileSet</background>
+  </backgrounds>
+  <paths name="paths">
+    <path>paths\stealthTestPath</path>
+  </paths>
   <scripts name="scripts">
-    <script>scripts\FireBullet.gml</script>
-    <script>scripts\Investigate.gml</script>
-    <script>scripts\FollowCow.gml</script>
+    <scripts name="Alerts">
+      <script>scripts\AlertFollow.gml</script>
+      <script>scripts\MakeAlert.gml</script>
+      <script>scripts\Investigate.gml</script>
+    </scripts>
+    <scripts name="Interface">
+      <script>scripts\PlayerInterface.gml</script>
+    </scripts>
+    <scripts name="Collision">
+      <script>scripts\BulletCollide.gml</script>
+      <script>scripts\CollisionAlert.gml</script>
+      <script>scripts\CollisionHostile.gml</script>
+      <script>scripts\WallCollision.gml</script>
+    </scripts>
+    <scripts name="Projectiles">
+      <script>scripts\FireBulletStraight.gml</script>
+    </scripts>
+    <scripts name="Sprite Manipulation">
+      <script>scripts\Spinning.gml</script>
+      <script>scripts\SpriteMovementChange.gml</script>
+      <script>scripts\LookAt.gml</script>
+      <script>scripts\Bury.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\cow1</object>
-    <objects name="Detectors">
-      <object>objects\detector1</object>
-    </objects>
-    <objects name="Collision Checkers">
-      <objects name="Detector 1 Checkers">
-        <object>objects\collisionAlertedRegular1</object>
-        <object>objects\collisionHostileRegular1</object>
+    <objects name="Player">
+      <object>objects\playerGeneric</object>
+      <objects name="Avatars">
+        <object>objects\cow1</object>
       </objects>
-      <object>objects\alertPoint</object>
     </objects>
-    <object>objects\bulletSmall1</object>
+    <objects name="Enemies">
+      <object>objects\Detector1</object>
+    </objects>
+    <objects name="Alerts">
+      <object>objects\alertGeneric</object>
+      <object>objects\alertPoint</object>
+      <object>objects\alertPointFollow</object>
+    </objects>
+    <objects name="Projectiles">
+      <object>objects\projectileGeneric</object>
+      <objects name="Bullets">
+        <object>objects\bulletSmall1</object>
+      </objects>
+    </objects>
+    <objects name="Collision">
+      <object>objects\wallCollide</object>
+    </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\Stealth_Test_Room</room>
     <room>rooms\Starting_Pasture</room>
