@@ -8,21 +8,18 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Cow Down">
-      <sprite>sprites\downWalk</sprite>
-      <sprite>sprites\downFace</sprite>
-    </sprites>
     <sprites name="Detectors">
       <sprite>sprites\detectorBasic</sprite>
     </sprites>
-    <sprites name="Bullets">
-      <sprite>sprites\bulletSmall</sprite>
-    </sprites>
     <sprites name="Collision">
-      <sprite>sprites\exclamation</sprite>
       <sprite>sprites\collisionWall</sprite>
-      <sprite>sprites\collisionPlayer</sprite>
     </sprites>
+    <sprite>sprites\bullet1</sprite>
+    <sprite>sprites\cowDie</sprite>
+    <sprite>sprites\cowShooting</sprite>
+    <sprite>sprites\cowStand</sprite>
+    <sprite>sprites\cowWalk</sprite>
+    <sprite>sprites\exclamation</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\stealthTileSet</background>
@@ -31,23 +28,21 @@
     <path>paths\stealthTestPath</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\FireBullet.gml</script>
+    <script>scripts\AlertFollow.gml</script>
+    <script>scripts\BulletCollide.gml</script>
+    <script>scripts\Bury.gml</script>
+    <script>scripts\CollisionAlert.gml</script>
+    <script>scripts\CollisionHostile.gml</script>
+    <script>scripts\FireBulletStraight.gml</script>
     <script>scripts\Investigate.gml</script>
     <script>scripts\LookAt.gml</script>
-    <script>scripts\Bury.gml</script>
-    <scripts name="Collision">
-      <script>scripts\CollisionAlert.gml</script>
-      <script>scripts\CollisionHostile.gml</script>
-    </scripts>
-    <scripts name="Alert">
-      <script>scripts\MakeAlert.gml</script>
-      <script>scripts\AlertFollow.gml</script>
-    </scripts>
+    <script>scripts\MakeAlert.gml</script>
+    <script>scripts\PlayerInterface.gml</script>
+    <script>scripts\Spinning.gml</script>
+    <script>scripts\SpriteMovementChange.gml</script>
+    <script>scripts\WallCollision.gml</script>
   </scripts>
   <objects name="objects">
-    <objects name="Player">
-      <object>objects\cow1</object>
-    </objects>
     <objects name="Detectors">
       <object>objects\detector1</object>
     </objects>
@@ -55,12 +50,8 @@
       <object>objects\alertPoint</object>
       <object>objects\alertPointFollow</object>
     </objects>
-    <objects name="Projectiles">
-      <object>objects\bulletSmall1</object>
-    </objects>
     <objects name="Collision">
       <object>objects\wallCollide</object>
-      <object>objects\cow1Collide</object>
     </objects>
   </objects>
   <rooms name="rooms">

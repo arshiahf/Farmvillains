@@ -163,7 +163,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>AlertFollow</script>
+            <script>&lt;undefined&gt;</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -229,7 +229,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>CollisionHostile</script>
+            <script>&lt;undefined&gt;</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -295,7 +295,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>CollisionAlert</script>
+            <script>&lt;undefined&gt;</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -337,7 +337,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>LookAt</script>
+            <script>&lt;undefined&gt;</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -557,7 +557,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>FireBullet</script>
+            <script>&lt;undefined&gt;</script>
           </argument>
           <argument>
             <kind>0</kind>
