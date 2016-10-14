@@ -8,18 +8,26 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Detectors">
+    <sprites name="Livestock">
+      <sprites name="Cow">
+        <sprite>sprites\cowStand</sprite>
+        <sprite>sprites\cowWalk</sprite>
+        <sprite>sprites\cowShooting</sprite>
+        <sprite>sprites\cowDie</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Enemies">
       <sprite>sprites\detectorBasic</sprite>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprite>sprites\bullet1</sprite>
     </sprites>
     <sprites name="Collision">
       <sprite>sprites\collisionWall</sprite>
     </sprites>
-    <sprite>sprites\bullet1</sprite>
-    <sprite>sprites\cowDie</sprite>
-    <sprite>sprites\cowShooting</sprite>
-    <sprite>sprites\cowStand</sprite>
-    <sprite>sprites\cowWalk</sprite>
-    <sprite>sprites\exclamation</sprite>
+    <sprites name="Alerts">
+      <sprite>sprites\exclamation</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\stealthTileSet</background>
@@ -43,12 +51,25 @@
     <script>scripts\WallCollision.gml</script>
   </scripts>
   <objects name="objects">
-    <objects name="Detectors">
+    <objects name="Player">
+      <object>objects\playerGeneric</object>
+      <objects name="Avatars">
+        <object>objects\cow</object>
+      </objects>
+    </objects>
+    <objects name="Enemies">
       <object>objects\detector1</object>
     </objects>
     <objects name="Alerts">
+      <object>objects\alertGeneric</object>
       <object>objects\alertPoint</object>
       <object>objects\alertPointFollow</object>
+    </objects>
+    <objects name="Projectiles">
+      <object>objects\projectileGeneric</object>
+      <objects name="Bullets">
+        <object>objects\bulletSmall1</object>
+      </objects>
     </objects>
     <objects name="Collision">
       <object>objects\wallCollide</object>
