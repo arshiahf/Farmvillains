@@ -33,7 +33,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>instance_nearest</string>
+            <string>instance_nearest(self.x, self.y, enemyGeneric)</string>
           </argument>
           <argument>
             <kind>0</kind>
