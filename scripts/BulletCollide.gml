@@ -1,16 +1,19 @@
 var bullet = argument0;
-var target = argument1;
-var healthLoss = argument2;
+var healthLoss = argument1;
+var collide = (object_get_parent(other) != (enemyGeneric or projectileGeneric or alertGeneric))
 
-with bullet
+var bulletX1 = bullet.x - bullet.sprite_width / 2;
+var bulletX2 = bullet.x + bullet.sprite_width / 2;
+var bulletY1 = bullet.y - bullet.sprite_height / 2;
+var bulletY2 = bullet.y - bullet.sprite_height / 2;
+if collision_ellipse(bulletX1, bulletY1, bulletX2, bulletY2, collide, true, false)
 {
-    var bulletX1 = x - sprite_width / 2;
-    var bulletX2 = x + sprite_width / 2;
-    var bulletY1 = y - sprite_height / 2;
-    var bulletY2 = y - sprite_height / 2;
-    if collision_ellipse(bulletX1, bulletY1, bulletX2, bulletY2, playerGeneric, true, false)
-    {
-        target.health -= healthLoss;
+    //if object_get_parent(temp) != (enemyGeneric or projectileGeneric or alertGeneric)
+    //{
+        if object_get_parent(other) == (playerGeneric or neutralGeneric)
+        {
+            other.health -= healthLoss;
+        }
         instance_destroy();
-    }
+    //}
 }

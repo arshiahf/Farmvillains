@@ -41,7 +41,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>WallCollision(self, wallCollide);
+            <string>//WallCollision(self, wallCollide);
 PlayerInterface(self);
 SpriteMovementChange(self, cowWalk, cowStand);
 </string>

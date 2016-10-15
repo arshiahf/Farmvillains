@@ -70,6 +70,9 @@
           <object>objects\cowAvatar</object>
         </objects>
       </objects>
+      <objects name="Neutral">
+        <object>objects\neutralGeneric</object>
+      </objects>
       <objects name="Enemies">
         <object>objects\enemyGeneric</object>
         <object>objects\detector1</object>
