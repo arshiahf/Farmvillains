@@ -1,5 +1,6 @@
 var enemy = argument0;
 var alert = argument1;
+var adjust = argument2;
 
 with enemy
 {
@@ -15,4 +16,4 @@ with enemy
     }
 }
 
-LookAt(alert, enemy, -90);
+LookAt(alert, enemy, adjust);

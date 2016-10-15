@@ -90,8 +90,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room2</room>
     <room>rooms\Stealth_Test_Room</room>
+    <room>rooms\room2</room>
     <room>rooms\Starting_Pasture</room>
   </rooms>
   <help>

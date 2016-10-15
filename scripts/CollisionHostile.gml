@@ -1,7 +1,7 @@
 var player = argument0;
 var enemy = argument1;
 
-with detect
+with enemy
 {
     if collision_circle(enemy.x, enemy.y, 48, player, true, true)
     {
