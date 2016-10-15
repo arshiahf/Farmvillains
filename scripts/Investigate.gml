@@ -15,4 +15,4 @@ with enemy
     }
 }
 
-LookAt(alert, enemy);
+LookAt(alert, enemy, -90);

@@ -61,14 +61,18 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <objects name="Player">
-      <object>objects\playerGeneric</object>
-      <objects name="Avatars">
-        <object>objects\cowAvatar</object>
+    <objects name="Living">
+      <object>objects\livingGeneric</object>
+      <objects name="Player">
+        <object>objects\playerGeneric</object>
+        <objects name="Avatars">
+          <object>objects\cowAvatar</object>
+        </objects>
       </objects>
-    </objects>
-    <objects name="Enemies">
-      <object>objects\enemyGeneric</object>
+      <objects name="Enemies">
+        <object>objects\enemyGeneric</object>
+        <object>objects\detector1</object>
+      </objects>
     </objects>
     <objects name="Alerts">
       <object>objects\alertGeneric</object>

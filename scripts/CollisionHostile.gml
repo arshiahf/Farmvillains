@@ -1,6 +1,5 @@
 var player = argument0;
 var enemy = argument1;
-var
 
 with detect
 {
