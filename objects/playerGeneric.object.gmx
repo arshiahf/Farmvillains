@@ -42,7 +42,6 @@
           <argument>
             <kind>1</kind>
             <string>PlayerInterface(self);
-SpriteMovementChange(self, cowWalk, cowStand);
 </string>
           </argument>
         </arguments>
