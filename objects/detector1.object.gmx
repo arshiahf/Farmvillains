@@ -247,15 +247,15 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>self</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
             <string>bulletSmall1</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>6</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-90</string>
           </argument>
           <argument>
             <kind>0</kind>

@@ -71,7 +71,6 @@
     </scripts>
     <scripts name="Projectiles">
       <script>scripts\FireBulletStraight.gml</script>
-      <script>scripts\ProjectileCreate.gml</script>
     </scripts>
     <scripts name="Interface">
       <script>scripts\PlayerInterface.gml</script>
@@ -109,6 +108,7 @@
       </objects>
     </objects>
     <objects name="Collision">
+      <object>objects\collisionGeneric</object>
       <object>objects\wallCollide</object>
     </objects>
   </objects>
