@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>enemyGeneric</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -247,15 +247,15 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>self</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
             <string>bulletSmall1</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>6</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-90</string>
           </argument>
           <argument>
             <kind>0</kind>

@@ -26,8 +26,8 @@ if gamepad_is_connected(0)
 
 // Player movement rates
 
-var moveSpeed = 5;
-var moveSpeedSneaking = 3;
+var moveSpeed = player.move;
+var moveSpeedSneaking = player.moveSneaking;
 
 // Game functions for player input
 with player
