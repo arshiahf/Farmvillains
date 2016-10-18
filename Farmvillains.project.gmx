@@ -13,11 +13,12 @@
       <sprite>sprites\Walk_Down</sprite>
       <sprite>sprites\Face_Down</sprite>
     </sprites>
+    <sprite>sprites\sprite3</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\object0</object>
+    <object>objects\cow_face_down</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Starting_Pasture</room>
