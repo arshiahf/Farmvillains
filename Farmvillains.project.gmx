@@ -10,32 +10,14 @@
   <sprites name="sprites">
     <sprites name="Livestock">
       <sprites name="Cow">
-        <sprite>sprites\cowStand</sprite>
         <sprite>sprites\cowWalk</sprite>
+        <sprite>sprites\cowStand</sprite>
         <sprite>sprites\cowShooting</sprite>
         <sprite>sprites\cowDie</sprite>
       </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\detectorBasic</sprite>
-      <sprites name="Farmers">
-        <sprites name="People">
-          <sprites name="Male"/>
-        </sprites>
-        <sprites name="Equipment"/>
-      </sprites>
-      <sprites name="Cops">
-        <sprites name="People">
-          <sprites name="Male"/>
-        </sprites>
-        <sprites name="Equipment"/>
-      </sprites>
-      <sprites name="Military">
-        <sprites name="People">
-          <sprites name="Male"/>
-        </sprites>
-        <sprites name="Equipment"/>
-      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\bullet1</sprite>
