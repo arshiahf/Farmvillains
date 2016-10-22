@@ -38,6 +38,7 @@
   <scripts name="scripts">
     <script>scripts\Globals.gml</script>
     <script>scripts\ObjectCreation.gml</script>
+    <script>scripts\InheritEvents.gml</script>
     <scripts name="Collision">
       <script>scripts\CollisionAlert.gml</script>
       <script>scripts\CollisionHostile.gml</script>
@@ -77,7 +78,9 @@
       </objects>
       <objects name="Enemies">
         <object>objects\enemyGeneric</object>
-        <object>objects\detector1</object>
+        <objects name="Test">
+          <object>objects\detector1</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Alerts">
