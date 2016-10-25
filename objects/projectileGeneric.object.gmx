@@ -8,7 +8,7 @@
   <parentName>objectGeneric</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="4" ename="objectGeneric">
       <action>
         <libid>1</libid>
         <id>601</id>
