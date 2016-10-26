@@ -36,13 +36,10 @@
     <path>paths\stealthTestPath</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\Globals.gml</script>
-    <script>scripts\ObjectCreation.gml</script>
     <script>scripts\InheritEvents.gml</script>
     <scripts name="Collision">
-      <script>scripts\CollisionAlert.gml</script>
-      <script>scripts\CollisionHostile.gml</script>
       <script>scripts\BulletCollide.gml</script>
+      <script>scripts\DetectCollision.gml</script>
       <script>scripts\WallCollision.gml</script>
     </scripts>
     <scripts name="Sprite Manipulation">
@@ -52,15 +49,22 @@
       <script>scripts\Bury.gml</script>
     </scripts>
     <scripts name="Alerts">
-      <script>scripts\MakeAlert.gml</script>
+      <script>scripts\AlertAbove.gml</script>
       <script>scripts\AlertFollow.gml</script>
-      <script>scripts\Investigate.gml</script>
     </scripts>
     <scripts name="Projectiles">
       <script>scripts\FireBulletStraight.gml</script>
     </scripts>
     <scripts name="Interface">
       <script>scripts\PlayerInterface.gml</script>
+    </scripts>
+    <scripts name="Detection">
+      <script>scripts\CollisionAlert.gml</script>
+      <script>scripts\CollisionHostile.gml</script>
+      <script>scripts\Investigate.gml</script>
+      <script>scripts\SoundDetect.gml</script>
+      <script>scripts\MakeHostile.gml</script>
+      <script>scripts\MakeAlert.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
