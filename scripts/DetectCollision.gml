@@ -38,54 +38,65 @@ with enemy
                 inCone = false;
             }
         }
+        else
+        {
+            if anglePlayer <= coneLeft and anglePlayer >= coneRight
+            {
+                inCone = true;
+            }
+            else
+            {
+                inCone = false
+            }
+        }
         
         // If player is in cone
         if inCone
         {
             //Check distance to player
-            var distancePlayer = point_distance(enemy.x, enemy.y, player.x, player.y)
+            var distancePlayer = point_distance(x, y, player.x, player.y)
             
             // Check distance against player visibility
             if player.visibility == 3
             {
-                if distancePlayer <= hostile3
+                if distancePlayer <= hostile3 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert3
+                else if distancePlayer <= alert3 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
             }
             else if player.visibility == 2
             {
-                if distancePlayer <= hostile2
+                if distancePlayer <= hostile2 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert2
+                else if distancePlayer <= alert2 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
             }
             else if player.visibility == 1
             {
-                if distancePlayer <= hostile1
+                if distancePlayer <= hostile1 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert1
+                else if distancePlayer <= alert1 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
             }
             else
             {
-                if distancePlayer <= hostile0
+                if distancePlayer <= hostile0 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert0
+                else if distancePlayer <= alert0 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }

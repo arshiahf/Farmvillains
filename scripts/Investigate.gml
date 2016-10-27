@@ -4,7 +4,7 @@ var alert = argument0;
 with enemy
 {
     path_end();
-    if distance_to_object(alert) > 5
+    if distance_to_object(alert) > 5 and !hostile
     {
         mp_potential_step(alert.x, alert.y, 5, false);
         alarm[10] = 1;

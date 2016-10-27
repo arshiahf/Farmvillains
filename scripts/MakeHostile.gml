@@ -2,6 +2,8 @@ var enemy = self;
 
 with enemy
 {
+    alert = true
+    hostile = true
     alarm[0] = 0
     alarm[1] = 0
     alarm[2] = 300;

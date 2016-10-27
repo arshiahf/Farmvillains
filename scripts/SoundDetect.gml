@@ -5,7 +5,7 @@ var soundRadius = 25;
 
 with enemy
 {
-    if collision_circle(x, y, obj.noiseLevel * soundRadius, obj, true, false)
+    if collision_circle(x, y, obj.noiseLevel * soundRadius, all, true, false)
     {
         if object_get_parent(obj.object_index) == neutralGeneric
         {
