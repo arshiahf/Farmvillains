@@ -59,44 +59,44 @@ with enemy
             // Check distance against player visibility
             if player.visibility == 3
             {
-                if distancePlayer <= hostile3 and !hostile
+                if distancePlayer <= range0 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert3 and !alert and !hostile
+                else if distancePlayer <= range1 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
             }
             else if player.visibility == 2
             {
-                if distancePlayer <= hostile2 and !hostile
+                if distancePlayer <= range1 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert2 and !alert and !hostile
+                else if distancePlayer <= range2 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
             }
             else if player.visibility == 1
             {
-                if distancePlayer <= hostile1 and !hostile
+                if distancePlayer <= range2 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert1 and !alert and !hostile
+                else if distancePlayer <= range3 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
             }
             else
             {
-                if distancePlayer <= hostile0 and !hostile
+                if distancePlayer <= range3 and !hostile
                 {
                     MakeHostile()
                 }
-                else if distancePlayer <= alert0 and !alert and !hostile
+                else if distancePlayer <= range4 and !alert and !hostile
                 {
                     MakeAlert(player)
                 }
