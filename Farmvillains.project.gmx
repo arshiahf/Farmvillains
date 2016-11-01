@@ -99,7 +99,6 @@
       <object>objects\collisionGeneric</object>
       <object>objects\wallCollide</object>
     </objects>
-    <object>objects\object14</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
