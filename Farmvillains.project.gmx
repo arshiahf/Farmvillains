@@ -16,6 +16,7 @@
     <sprite>sprites\cowWalk</sprite>
     <sprite>sprites\detectorBasic</sprite>
     <sprite>sprites\exclamation</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\stealthTileSet</background>
@@ -56,6 +57,10 @@
     <object>objects\playerGeneric</object>
     <object>objects\projectileGeneric</object>
     <object>objects\wallCollide</object>
+    <object>objects\obj_bullet</object>
+    <objects name="controllers">
+      <object>objects\cont_main</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Stealth_Test_Room</room>
