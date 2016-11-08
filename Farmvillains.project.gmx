@@ -8,15 +8,105 @@
     <sound>sound\sound0</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprites name="Cow Down">
-      <sprite>sprites\Walk_Down</sprite>
-      <sprite>sprites\Face_Down</sprite>
+    <sprites name="Livestock">
+      <sprites name="Cow">
+        <sprite>sprites\cowWalk</sprite>
+        <sprite>sprites\cowStand</sprite>
+        <sprite>sprites\cowShooting</sprite>
+        <sprite>sprites\cowDie</sprite>
+        <sprite>sprites\chicken</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Enemies">
+      <sprite>sprites\detectorBasic</sprite>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprite>sprites\bullet1</sprite>
+    </sprites>
+    <sprites name="Collision">
+      <sprite>sprites\collisionWall</sprite>
+    </sprites>
+    <sprites name="Alerts">
+      <sprite>sprites\exclamation</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
-  <paths name="paths"/>
+  <backgrounds name="background">
+    <background>background\stealthTileSet</background>
+    <background>background\background1</background>
+  </backgrounds>
+  <paths name="paths">
+    <path>paths\stealthTestPath</path>
+  </paths>
+  <scripts name="scripts">
+    <script>scripts\Globals.gml</script>
+    <script>scripts\ObjectCreation.gml</script>
+    <script>scripts\InheritEvents.gml</script>
+    <scripts name="Collision">
+      <script>scripts\CollisionAlert.gml</script>
+      <script>scripts\CollisionHostile.gml</script>
+      <script>scripts\BulletCollide.gml</script>
+      <script>scripts\WallCollision.gml</script>
+    </scripts>
+    <scripts name="Sprite Manipulation">
+      <script>scripts\LookAt.gml</script>
+      <script>scripts\Spinning.gml</script>
+      <script>scripts\SpriteMovementChange.gml</script>
+      <script>scripts\Bury.gml</script>
+    </scripts>
+    <scripts name="Alerts">
+      <script>scripts\MakeAlert.gml</script>
+      <script>scripts\AlertFollow.gml</script>
+      <script>scripts\Investigate.gml</script>
+    </scripts>
+    <scripts name="Projectiles">
+      <script>scripts\FireBulletStraight.gml</script>
+    </scripts>
+    <scripts name="Interface">
+      <script>scripts\PlayerInterface.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <object>objects\objectGeneric</object>
+    <objects name="Living">
+      <object>objects\livingGeneric</object>
+      <objects name="Players">
+        <object>objects\playerGeneric</object>
+        <objects name="Avatars">
+          <object>objects\cowAvatar</object>
+        </objects>
+      </objects>
+      <objects name="Neutral">
+        <object>objects\neutralGeneric</object>
+      </objects>
+      <objects name="Enemies">
+        <object>objects\enemyGeneric</object>
+        <objects name="Test">
+          <object>objects\detector1</object>
+        </objects>
+      </objects>
+    </objects>
+    <objects name="Alerts">
+      <object>objects\alertGeneric</object>
+      <object>objects\alertPoint</object>
+      <object>objects\alertPointFollow</object>
+    </objects>
+    <objects name="Projectiles">
+      <object>objects\projectileGeneric</object>
+      <objects name="Bullets">
+        <object>objects\bulletSmall1</object>
+      </objects>
+    </objects>
+    <objects name="Collision">
+      <object>objects\collisionGeneric</object>
+      <object>objects\wallCollide</object>
+    </objects>
+  </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
+    <room>rooms\Stealth_Test_Room</room>
+    <room>rooms\room2</room>
     <room>rooms\Starting_Pasture</room>
   </rooms>
   <help>
