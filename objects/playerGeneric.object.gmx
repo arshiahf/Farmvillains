@@ -69,6 +69,7 @@
             <kind>1</kind>
             <string>health = (life/lifeMax) * 100;
 InheritEvents();
+SoundProduce();
 </string>
           </argument>
         </arguments>

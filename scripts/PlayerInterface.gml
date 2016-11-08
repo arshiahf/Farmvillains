@@ -17,6 +17,8 @@ var gamePadLeft = gamepad_button_check(0, gp_padl);
 var gamePadDown = gamepad_button_check(0, gp_padd);
 var gamePadRight = gamepad_button_check(0, gp_padr);
 
+var leftCtrl = keyboard_check_direct(vk_lcontrol)
+
 // Gamepad deadzone
 
 if gamepad_is_connected(0)
@@ -36,11 +38,25 @@ with player
 
     if (keyS or keyDown or gamePadDown)
     {
-        vspeed = moveSpeed;
+        if leftCtrl
+        {
+            vspeed = moveSpeedSneaking
+        }
+        else
+        {
+            vspeed = moveSpeed;
+        }
     }
     if (keyW or keyUp or gamePadUp)
     {
-        vspeed = -moveSpeed;
+        if leftCtrl
+        {
+            vspeed = -moveSpeedSneaking
+        }
+        else
+        {
+            vspeed = -moveSpeed;
+        }
     }
     if ((keyW or keyUp or gamePadUp) and (keyS or keyDown or gamePadDown)) or (!keyW and !keyUp and !gamePadUp and !keyS and !keyDown and !gamePadDown)
     {
@@ -49,11 +65,25 @@ with player
     
     if (keyD or keyRight or gamePadRight)
     {
-        hspeed = moveSpeed;
+        if leftCtrl
+        {
+            hspeed = moveSpeedSneaking
+        }
+        else
+        {
+            hspeed = moveSpeed;
+        }
     }
     if (keyA or keyLeft or gamePadLeft)
     {
-        hspeed = -moveSpeed;
+        if leftCtrl
+        {
+            hspeed = -moveSpeedSneaking
+        }
+        else
+        {
+            hspeed = -moveSpeed;
+        }
     }
     if ((keyD or keyRight or gamePadRight) and (keyA or keyLeft or gamePadLeft)) or (!keyD and !keyRight and !gamePadRight and !keyA and !keyLeft and !gamePadLeft)
     {
