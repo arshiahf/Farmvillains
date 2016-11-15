@@ -28,11 +28,11 @@
             <string>alarm[0] = 1
 alarm[1] = 1
 alarm[5] = 1
-range4 = 200
-range3 = 166
-range2 = 133
+range4 = 250
+range3 = 200
+range2 = 150
 range1 = 100
-range0 = 67
+range0 = 50
 adjust = 0
 alert = false
 hostile = false

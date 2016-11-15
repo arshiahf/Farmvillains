@@ -29,7 +29,7 @@ if gamepad_is_connected(0)
 // Player movement rates
 
 var moveSpeed = player.move;
-var moveSpeedSneaking = player.moveSneaking;
+var moveSpeedSneakingFast = player.moveSneaking;
 
 // Game functions for player input
 with player
@@ -40,7 +40,7 @@ with player
     {
         if leftCtrl
         {
-            vspeed = moveSpeedSneaking
+            vspeed = moveSpeedSneakingFast
         }
         else
         {
@@ -51,7 +51,7 @@ with player
     {
         if leftCtrl
         {
-            vspeed = -moveSpeedSneaking
+            vspeed = -moveSpeedSneakingFast
         }
         else
         {
@@ -67,7 +67,7 @@ with player
     {
         if leftCtrl
         {
-            hspeed = moveSpeedSneaking
+            hspeed = moveSpeedSneakingFast
         }
         else
         {
@@ -78,7 +78,7 @@ with player
     {
         if leftCtrl
         {
-            hspeed = -moveSpeedSneaking
+            hspeed = -moveSpeedSneakingFast
         }
         else
         {
