@@ -299,6 +299,7 @@ DetectCollision();
           <argument>
             <kind>1</kind>
             <string>InheritEvents();
+CheckAlert();
 </string>
           </argument>
         </arguments>

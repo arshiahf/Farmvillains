@@ -5,7 +5,7 @@ with enemy
 {
     alert = true
     AlertAbove();
-    var alert = instance_create(player.x, player.y, alertPoint);
-    Investigate(alert);
+    var alertSpot = instance_create(player.x, player.y, alertPoint);
+    Investigate(alertSpot);
     alarm_set(5, 80);
 }

@@ -9,5 +9,6 @@ with enemy
     alarm[2] = 300;
     alarm[3] = 10;
     alarm[4] = 1;
+    alarm[5] = 300;
     alarm[10] = 0;
 }

@@ -74,6 +74,8 @@
       <script>scripts\SoundProduce.gml</script>
       <script>scripts\MakeHostile.gml</script>
       <script>scripts\MakeAlert.gml</script>
+      <script>scripts\CheckAlert.gml</script>
+      <script>scripts\Shadows.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

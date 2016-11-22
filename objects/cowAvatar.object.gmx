@@ -85,6 +85,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>moveSprint</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>9</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>move</string>
           </argument>
           <argument>
@@ -109,11 +133,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>moveSneaking</string>
+            <string>moveSneakingFast</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>3</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>moveSneakingSlow</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
