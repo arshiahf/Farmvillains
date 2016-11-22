@@ -1,13 +1,12 @@
-var enemy = argument0;
-var alert = argument1;
-var adjust = argument2;
+var enemy = self;
+var alert = argument0;
 
 with enemy
 {
     path_end();
-    if distance_to_object(alert) > 5
+    if distance_to_object(alert) > 5 and !hostile
     {
-        mp_potential_step(alert.x, alert.y, 5, false);
+        mp_potential_step(alert.x, alert.y, 3, false);
         alarm[10] = 1;
     }
     else
@@ -16,4 +15,4 @@ with enemy
     }
 }
 
-LookAt(alert, enemy, adjust);
+LookAt(alert, enemy);

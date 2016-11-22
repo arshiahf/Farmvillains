@@ -8,30 +8,7 @@
   <parentName>playerGeneric</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>PlayerInterface(self);
-SpriteMovementChange(self, cowWalk, cowStand)
-InheritEvents();
-</string>
-          </argument>
-        </arguments>
-      </action>
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -48,19 +25,19 @@ InheritEvents();
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>SpriteMovementChange</script>
+            <script>InheritEvents</script>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>self</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>cowWalk</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>cowStand</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -72,8 +49,6 @@ InheritEvents();
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>721</id>
@@ -91,6 +66,30 @@ InheritEvents();
           <argument>
             <kind>0</kind>
             <string>100</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>moveSprint</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>9</string>
           </argument>
         </arguments>
       </action>
@@ -134,7 +133,7 @@ InheritEvents();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>moveSneaking</string>
+            <string>moveSneakingFast</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -144,41 +143,25 @@ InheritEvents();
       </action>
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>9</kind>
-            <script>InheritEvents</script>
+            <kind>1</kind>
+            <string>moveSneakingSlow</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -227,6 +210,73 @@ InheritEvents();
           <argument>
             <kind>0</kind>
             <string>100</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>InheritEvents();
+PlayerInterface(self);
+SpriteMovementChange(self, cowWalk, cowStand)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>PlayerFireBulletStraight</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>bulletSmall1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>8</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
