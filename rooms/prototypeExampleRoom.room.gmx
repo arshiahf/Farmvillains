@@ -52,7 +52,6 @@
   </views>
   <instances>
     <instance objName="detector1" x="512" y="448" name="inst_B6F592D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cowAvatar" x="512" y="672" name="inst_40AEDC43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="176" y="432" name="inst_9C1AFDEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="208" y="560" name="inst_2208FEE6" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="176" y="688" name="inst_EF0272CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
