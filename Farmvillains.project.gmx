@@ -6,6 +6,9 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sound0</sound>
+    <sound>sound\in_game_music</sound>
+    <sound>sound\strings_music</sound>
+    <sound>sound\goat</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Livestock">
