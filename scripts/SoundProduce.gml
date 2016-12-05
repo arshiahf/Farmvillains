@@ -1,7 +1,7 @@
 var obj = self; //The object making the noise
 var enemy = enemyGeneric; //The enemy detecting said object
 
-if instance_exists(self)
+if instance_exists(self) and instance_exists(enemy)
 {
     var noiseObj = obj.noiseLevel * obj.soundRadius
     var distanceLiving = point_distance(obj.x, obj.y, enemy.x, enemy.y)

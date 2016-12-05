@@ -300,6 +300,7 @@ DetectCollision();
             <kind>1</kind>
             <string>InheritEvents();
 CheckAlert();
+LifeCheck()
 </string>
           </argument>
         </arguments>

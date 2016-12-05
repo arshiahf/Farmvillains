@@ -73,32 +73,32 @@
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="2" enumb="3">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
+        <id>611</id>
+        <kind>6</kind>
         <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>10</string>
+            <kind>1</kind>
+            <string>bulletSpeed</string>
           </argument>
           <argument>
-            <kind>4</kind>
-            <string>3</string>
+            <kind>0</kind>
+            <string>5</string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="3">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -115,7 +115,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>FireBulletStraight</script>
+            <script>FireStraight</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -123,11 +123,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>bulletSmall1</string>
+            <string>missileBlue</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>6</string>
+            <string>bulletSpeed</string>
           </argument>
           <argument>
             <kind>0</kind>

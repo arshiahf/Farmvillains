@@ -64,7 +64,6 @@
     <instance objName="wallCollide" x="912" y="80" name="inst_C4EFAB10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="912" y="336" name="inst_9A1C19EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="848" y="336" name="inst_6F2BCA29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="detector1" x="512" y="400" name="inst_FBEC6BB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stealth1" x="224" y="384" name="inst_90B0B672" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="stealth1" x="32" y="384" name="inst_F94BDBC8" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="stealth1" x="64" y="384" name="inst_08567A94" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
@@ -94,6 +93,8 @@
     <instance objName="stealth3" x="608" y="384" name="inst_98D7C3B9" locked="0" code="" scaleX="2.06451606750488" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
     <instance objName="stealth2" x="672" y="384" name="inst_7C112003" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="stealth1" x="736" y="384" name="inst_B6F85E53" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="farmer" x="448" y="224" name="inst_C91637C4" locked="0" code="path_start(basicPatrolHoriz,5,path_action_reverse,1)" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cowAvatar" x="288" y="608" name="inst_2F646B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="stealthTileSet" x="0" y="0" w="32" h="32" xo="32" yo="0" id="10001771" name="inst_1DBE034C" depth="1000020" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

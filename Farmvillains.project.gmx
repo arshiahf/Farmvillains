@@ -4,9 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\sound0</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Livestock">
       <sprites name="Cow">
@@ -22,10 +20,19 @@
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\detectorBasic</sprite>
+      <sprites name="Farmer">
+        <sprite>sprites\farmerStand</sprite>
+        <sprite>sprites\farmerWalk</sprite>
+        <sprite>sprites\farmerShoot</sprite>
+      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\bullet1</sprite>
       <sprite>sprites\chickenFeed</sprite>
+      <sprite>sprites\buckshot</sprite>
+      <sprite>sprites\buckshotSmaller</sprite>
+      <sprite>sprites\missile1</sprite>
+      <sprite>sprites\cowMilk</sprite>
     </sprites>
     <sprites name="Collision">
       <sprite>sprites\collisionWall</sprite>
@@ -45,9 +52,11 @@
   <backgrounds name="background">
     <background>background\stealthTileSet</background>
     <background>background\background1</background>
+    <background>background\Barn</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\stealthTestPath</path>
+    <path>paths\basicPatrolHoriz</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\InheritEvents.gml</script>
@@ -67,8 +76,10 @@
       <script>scripts\AlertFollow.gml</script>
     </scripts>
     <scripts name="Projectiles">
-      <script>scripts\FireBulletStraight.gml</script>
+      <script>scripts\FireStraight.gml</script>
       <script>scripts\PlayerFireBulletStraight.gml</script>
+      <script>scripts\FireShotgun.gml</script>
+      <script>scripts\MissileFollow.gml</script>
     </scripts>
     <scripts name="Interface">
       <script>scripts\PlayerInterface.gml</script>
@@ -81,6 +92,13 @@
       <script>scripts\MakeAlert.gml</script>
       <script>scripts\CheckAlert.gml</script>
       <script>scripts\Shadows.gml</script>
+    </scripts>
+    <scripts name="Vital Statistics">
+      <script>scripts\LifeCheck.gml</script>
+    </scripts>
+    <scripts name="Pathing">
+      <script>scripts\ReturnToPath.gml</script>
+      <script>scripts\CloseIn.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -102,6 +120,9 @@
         <objects name="Test">
           <object>objects\detector1</object>
         </objects>
+        <objects name="Human">
+          <object>objects\farmer</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Alerts">
@@ -113,9 +134,14 @@
       <object>objects\projectileGeneric</object>
       <objects name="Bullets">
         <object>objects\bulletSmall1</object>
+        <object>objects\buckshot1</object>
       </objects>
       <objects name="Livestock Naturals">
         <object>objects\chickenGun</object>
+        <object>objects\cowMilk1</object>
+      </objects>
+      <objects name="Missiles">
+        <object>objects\missileBlue</object>
       </objects>
     </objects>
     <objects name="Collision">
@@ -141,6 +167,9 @@
     <room>rooms\Stealth_Test_Room</room>
     <room>rooms\room2</room>
     <room>rooms\Starting_Pasture</room>
+    <rooms name="Tutorial">
+      <room>rooms\basicControls</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
