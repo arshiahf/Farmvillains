@@ -8,6 +8,9 @@
     <sound>sound\sound0</sound>
     <sound>sound\chicken</sound>
     <sound>sound\Title_Screen</sound>
+    <sound>sound\gunshot</sound>
+    <sound>sound\creaky_door_open_and_close</sound>
+    <sound>sound\door_close</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\bullet1</sprite>
