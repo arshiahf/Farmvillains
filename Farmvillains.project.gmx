@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sound0</sound>
+    <sound>sound\chicken</sound>
+    <sound>sound\Title_Screen</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\bullet1</sprite>
