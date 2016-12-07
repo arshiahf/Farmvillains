@@ -7,15 +7,14 @@ var keyA = keyboard_check(ord('A'));
 var keyS = keyboard_check(ord('S'));
 var keyD = keyboard_check(ord('D'));
 
-var keyUp = keyboard_check(vk_up);
-var keyLeft = keyboard_check(vk_left);
-var keyDown = keyboard_check(vk_down);
-var keyRight = keyboard_check(vk_right);
-
 var gamePadUp = gamepad_button_check(0, gp_padu);
 var gamePadLeft = gamepad_button_check(0, gp_padl);
 var gamePadDown = gamepad_button_check(0, gp_padd);
 var gamePadRight = gamepad_button_check(0, gp_padr);
+
+var alt = keyboard_check(vk_alt)
+var ctrl = keyboard_check(vk_control)
+var shift = keyboard_check(vk_shift)
 
 // Gamepad deadzone
 
@@ -24,39 +23,104 @@ if gamepad_is_connected(0)
     gamepad_set_axis_deadzone(0, 0.05);
 }
 
-// Player movement rates
-
-var moveSpeed = player.move;
-var moveSpeedSneaking = player.moveSneaking;
-
-// Game functions for player input
-with player
+if instance_exists(player)
 {
-    // Non-sneaking movement keyboard
-
-    if (keyS or keyDown or gamePadDown)
-    {
-        vspeed = moveSpeed;
-    }
-    if (keyW or keyUp or gamePadUp)
-    {
-        vspeed = -moveSpeed;
-    }
-    if ((keyW or keyUp or gamePadUp) and (keyS or keyDown or gamePadDown)) or (!keyW and !keyUp and !gamePadUp and !keyS and !keyDown and !gamePadDown)
-    {
-        vspeed = 0;
-    }
+    // Player movement rates
     
-    if (keyD or keyRight or gamePadRight)
+    var moveSpeed = player.move;
+    var moveSpeedSprint = player.moveSprint;
+    var moveSpeedSneakingFast = player.moveSneakingFast;
+    var moveSpeedSneakingSlow = player.moveSneakingSlow;
+    
+    // Game functions for player input
+    with player
     {
-        hspeed = moveSpeed;
-    }
-    if (keyA or keyLeft or gamePadLeft)
-    {
-        hspeed = -moveSpeed;
-    }
-    if ((keyD or keyRight or gamePadRight) and (keyA or keyLeft or gamePadLeft)) or (!keyD and !keyRight and !gamePadRight and !keyA and !keyLeft and !gamePadLeft)
-    {
-        hspeed = 0
+        // Non-sneaking movement keyboard
+    
+        if (keyS or gamePadDown)
+        {
+            if alt
+            {
+                vspeed = moveSpeedSneakingSlow
+            }
+            else if ctrl
+            {
+                vspeed = moveSpeedSneakingFast
+            }
+            else if shift
+            {
+                vspeed = moveSpeedSprint
+            }
+            else
+            {
+                vspeed = moveSpeed;
+            }
+        }
+        if (keyW or gamePadUp)
+        {
+            if alt
+            {
+                vspeed = -moveSpeedSneakingSlow
+            }
+            else if ctrl
+            {
+                vspeed = -moveSpeedSneakingFast
+            }
+            else if shift
+            {
+                vspeed = -moveSpeedSprint
+            }
+            else
+            {
+                vspeed = -moveSpeed;
+            }
+        }
+        if ((keyW or gamePadUp) and (keyS or gamePadDown)) or (!keyW and !gamePadUp and !keyS and !gamePadDown)
+        {
+            vspeed = 0;
+        }
+        
+        if (keyD or gamePadRight)
+        {
+            if alt
+            {
+                hspeed = moveSpeedSneakingSlow
+            }
+            else if ctrl
+            {
+                hspeed = moveSpeedSneakingFast
+            }
+            else if shift
+            {
+                hspeed = moveSpeedSprint
+            }
+            else
+            {
+                hspeed = moveSpeed;
+            }
+        }
+        if (keyA or gamePadLeft)
+        {
+            if alt
+            {
+                hspeed = -moveSpeedSneakingSlow
+            }
+            else if ctrl
+            {
+                hspeed = -moveSpeedSneakingFast
+            }
+            else if shift
+            {
+                hspeed = -moveSpeedSprint
+            }
+            else
+            {
+                hspeed = -moveSpeed;
+            }
+        }
+        if ((keyD or gamePadRight) and (keyA or gamePadLeft)) or (!keyD and !gamePadRight and !keyA and !gamePadLeft)
+        {
+            hspeed = 0
+        }
     }
 }

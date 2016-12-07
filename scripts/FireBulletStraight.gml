@@ -18,3 +18,5 @@ with (inst)
     move_towards_point(targetX, targetY, projectileSpeed);
     image_angle = direction + adjust; // The "90" is a degree angle adjustment so the picture faces the target. Adjust as necessary
 }
+
+effect_create_above(ef_smoke, x, y, 2, c_purple)

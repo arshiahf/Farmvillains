@@ -1,4 +1,11 @@
-var obj = argument0;
-var alert = instance_create(obj.x, obj.y - 10, alertPointFollow);
+var enemy = self
+var player = argument0;
 
-AlertFollow(alert, obj)
+with enemy
+{
+    alert = true
+    AlertAbove();
+    var alertSpot = instance_create(player.x, player.y, alertPoint);
+    Investigate(alertSpot);
+    alarm_set(5, 80);
+}
