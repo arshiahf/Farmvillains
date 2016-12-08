@@ -1,102 +1,105 @@
-// Declare primary variables
-var player = playerGeneric;
-var enemy = self;
-
-// Check if a collision object is in the way
-if !collision_line(enemy.x, enemy.y, player.x, player.y, collisionGeneric, true, true)
+if instance_exists(playerGeneric)
 {
-    // Set sight cone
-    var coneLeft = image_angle + 60;
-    if coneLeft > 359
-    {
-        coneLeft =  coneLeft - 359;
-    }
+    // Declare primary variables
+    var player = playerGeneric;
+    var enemy = self;
     
-    var coneRight = image_angle - 60;
-    if coneRight < 0
+    // Check if a collision object is in the way
+    if !collision_line(enemy.x, enemy.y, player.x, player.y, collisionGeneric, true, true)
     {
-        coneRight = coneRight + 359;
-    }
-    
-    // Get angle to player
-    {
-        var anglePlayer = point_direction(x, y, player.x, player.y);
-    }
-    
-    // Check if player is in cone
-    var inCone
-    if coneRight > coneLeft
-    {
-        if anglePlayer <= coneLeft or anglePlayer >= coneRight
+        // Set sight cone
+        var coneLeft = image_angle + 60;
+        if coneLeft > 359
         {
-            inCone = true;
+            coneLeft =  coneLeft - 359;
         }
-        else
-        {
-            inCone = false;
-        }
-    }
-    else
-    {
-        if anglePlayer <= coneLeft and anglePlayer >= coneRight
-        {
-            inCone = true;
-        }
-        else
-        {
-            inCone = false
-        }
-    }
-    
-    // If player is in cone
-    if inCone
-    {
-        //Check distance to player
-        var distancePlayer = point_distance(x, y, player.x, player.y)
         
-        // Check distance against player visibility
-        if player.visibility == 3
+        var coneRight = image_angle - 60;
+        if coneRight < 0
         {
-            if distancePlayer <= range0 and !hostile
-            {
-                MakeHostile()
-            }
-            else if distancePlayer <= range1 and !alert and !hostile
-            {
-                MakeAlert(player)
-            }
+            coneRight = coneRight + 359;
         }
-        else if player.visibility == 2
+        
+        // Get angle to player
         {
-            if distancePlayer <= range1 and !hostile
-            {
-                MakeHostile()
-            }
-            else if distancePlayer <= range2 and !alert and !hostile
-            {
-                MakeAlert(player)
-            }
+            var anglePlayer = point_direction(x, y, player.x, player.y);
         }
-        else if player.visibility == 1
+        
+        // Check if player is in cone
+        var inCone
+        if coneRight > coneLeft
         {
-            if distancePlayer <= range2 and !hostile
+            if anglePlayer <= coneLeft or anglePlayer >= coneRight
             {
-                MakeHostile()
+                inCone = true;
             }
-            else if distancePlayer <= range3 and !alert and !hostile
+            else
             {
-                MakeAlert(player)
+                inCone = false;
             }
         }
         else
         {
-            if distancePlayer <= range3 and !hostile
+            if anglePlayer <= coneLeft and anglePlayer >= coneRight
             {
-                MakeHostile()
+                inCone = true;
             }
-            else if distancePlayer <= range4 and !alert and !hostile
+            else
             {
-                MakeAlert(player)
+                inCone = false
+            }
+        }
+        
+        // If player is in cone
+        if inCone
+        {
+            //Check distance to player
+            var distancePlayer = point_distance(x, y, player.x, player.y)
+            
+            // Check distance against player visibility
+            if player.visibility == 3
+            {
+                if distancePlayer <= range0 and !hostile
+                {
+                    MakeHostile()
+                }
+                else if distancePlayer <= range1 and !alert and !hostile
+                {
+                    MakeAlert(player)
+                }
+            }
+            else if player.visibility == 2
+            {
+                if distancePlayer <= range1 and !hostile
+                {
+                    MakeHostile()
+                }
+                else if distancePlayer <= range2 and !alert and !hostile
+                {
+                    MakeAlert(player)
+                }
+            }
+            else if player.visibility == 1
+            {
+                if distancePlayer <= range2 and !hostile
+                {
+                    MakeHostile()
+                }
+                else if distancePlayer <= range3 and !alert and !hostile
+                {
+                    MakeAlert(player)
+                }
+            }
+            else
+            {
+                if distancePlayer <= range3 and !hostile
+                {
+                    MakeHostile()
+                }
+                else if distancePlayer <= range4 and !alert and !hostile
+                {
+                    MakeAlert(player)
+                }
             }
         }
     }

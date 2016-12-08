@@ -58,11 +58,11 @@ hostile = false
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>Investigate</script>
+            <script>CloseIn</script>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>instance_nearest(self.x, self.y, alertPoint)</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -82,13 +82,37 @@ hostile = false
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>chaseFreq</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>10</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="5">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -100,11 +124,10 @@ hostile = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alert</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
+            <string>alert = false
+alarm[10] = 0;
+path_end();
+</string>
           </argument>
         </arguments>
       </action>
@@ -158,7 +181,7 @@ hostile = false
           </argument>
           <argument>
             <kind>0</kind>
-            <string>self</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -281,6 +304,56 @@ DetectCollision();
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>LifeCheck()
+CheckHit()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>lifeLast</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>life</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -300,7 +373,6 @@ DetectCollision();
             <kind>1</kind>
             <string>InheritEvents();
 CheckAlert();
-LifeCheck()
 </string>
           </argument>
         </arguments>
