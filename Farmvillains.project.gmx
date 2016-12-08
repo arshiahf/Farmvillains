@@ -5,44 +5,111 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sounds name="Music Tracks">
+      <sound>sound\titleMusic</sound>
+      <sound>sound\normalMusic</sound>
+      <sound>sound\stealthMusic</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Livestock">
       <sprites name="Cow">
         <sprite>sprites\cowWalk</sprite>
         <sprite>sprites\cowStand</sprite>
-        <sprite>sprites\cowShooting</sprite>
-        <sprite>sprites\cowDie</sprite>
+        <sprite>sprites\bullWalk</sprite>
+        <sprite>sprites\bullStand</sprite>
       </sprites>
       <sprites name="Chicken">
-        <sprite>sprites\chicken</sprite>
+        <sprite>sprites\chickenWalk</sprite>
+        <sprite>sprites\chickenStand</sprite>
+      </sprites>
+      <sprites name="Pig">
+        <sprite>sprites\pigStanding</sprite>
+        <sprite>sprites\pigWalking</sprite>
+      </sprites>
+      <sprites name="Mouse">
+        <sprite>sprites\mouseWalk</sprite>
+        <sprite>sprites\mouseStand</sprite>
       </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\detectorBasic</sprite>
+      <sprites name="Farmer">
+        <sprite>sprites\farmerStand</sprite>
+        <sprite>sprites\farmerWalk</sprite>
+        <sprite>sprites\farmerShoot</sprite>
+      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\bullet1</sprite>
-    </sprites>
-    <sprites name="Collision">
-      <sprite>sprites\collisionWall</sprite>
+      <sprite>sprites\chickenFeed</sprite>
+      <sprite>sprites\buckshot</sprite>
+      <sprite>sprites\buckshotSmaller</sprite>
+      <sprite>sprites\missile1</sprite>
+      <sprite>sprites\cowMilk</sprite>
+      <sprite>sprites\pigMud</sprite>
     </sprites>
     <sprites name="Alerts">
       <sprite>sprites\exclamation</sprite>
     </sprites>
-    <sprites name="Stealth">
-      <sprite>sprites\stealth1Sprite</sprite>
-      <sprite>sprites\stealth2Sprite</sprite>
-      <sprite>sprites\stealth3Sprite</sprite>
+    <sprites name="Menus">
+      <sprite>sprites\banner</sprite>
+      <sprite>sprites\newGame</sprite>
+      <sprite>sprites\quitGame</sprite>
+      <sprite>sprites\skipTutorial</sprite>
+      <sprite>sprites\levelSelect</sprite>
+      <sprite>sprites\bullInfo</sprite>
+      <sprite>sprites\pigInfo</sprite>
+      <sprite>sprites\cowInfo</sprite>
+      <sprite>sprites\chickenInfo</sprite>
+      <sprite>sprites\characterSelectText</sprite>
+      <sprite>sprites\wasdText</sprite>
+      <sprite>sprites\resumeGame</sprite>
+      <sprite>sprites\tutorial</sprite>
+      <sprite>sprites\mainMenuWords</sprite>
+      <sprite>sprites\w</sprite>
+      <sprite>sprites\a</sprite>
+      <sprite>sprites\s</sprite>
+      <sprite>sprites\d</sprite>
+      <sprite>sprites\fire</sprite>
+      <sprite>sprites\hear</sprite>
+      <sprite>sprites\see</sprite>
+      <sprite>sprites\hide</sprite>
+      <sprite>sprites\quietly</sprite>
+      <sprite>sprites\sprint</sprite>
+      <sprite>sprites\dontSprint</sprite>
+      <sprite>sprites\fun</sprite>
+      <sprite>sprites\escOut</sprite>
+      <sprite>sprites\farmWord</sprite>
+      <sprite>sprites\houseWord</sprite>
+      <sprite>sprites\boatWord</sprite>
     </sprites>
+    <sprites name="Mechanics">
+      <sprites name="Stealth">
+        <sprite>sprites\stealth1Sprite</sprite>
+        <sprite>sprites\stealth2Sprite</sprite>
+        <sprite>sprites\stealth3Sprite</sprite>
+      </sprites>
+      <sprites name="Collision">
+        <sprite>sprites\collisionWall</sprite>
+      </sprites>
+      <sprites name="Levels">
+        <sprite>sprites\levelEnterBox</sprite>
+        <sprite>sprites\levelExitBox</sprite>
+      </sprites>
+    </sprites>
+    <sprite>sprites\boat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\stealthTileSet</background>
     <background>background\background1</background>
+    <background>background\Barn</background>
+    <background>background\titleScreen</background>
+    <background>background\fiji</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\stealthTestPath</path>
+    <path>paths\basicPatrolHoriz</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\InheritEvents.gml</script>
@@ -62,20 +129,36 @@
       <script>scripts\AlertFollow.gml</script>
     </scripts>
     <scripts name="Projectiles">
-      <script>scripts\FireBulletStraight.gml</script>
-      <script>scripts\PlayerFireBulletStraight.gml</script>
+      <script>scripts\FireGun.gml</script>
+      <script>scripts\PlayerFireGun.gml</script>
+      <script>scripts\MissileFollow.gml</script>
+      <script>scripts\AreaOfEffect.gml</script>
+      <script>scripts\MissileFollow2.gml</script>
     </scripts>
     <scripts name="Interface">
       <script>scripts\PlayerInterface.gml</script>
-      <script>scripts\PlayerCamera.gml</script>
     </scripts>
     <scripts name="Detection">
-      <script>scripts\Investigate.gml</script>
       <script>scripts\SoundProduce.gml</script>
       <script>scripts\MakeHostile.gml</script>
       <script>scripts\MakeAlert.gml</script>
       <script>scripts\CheckAlert.gml</script>
       <script>scripts\Shadows.gml</script>
+    </scripts>
+    <scripts name="Vital Statistics">
+      <script>scripts\LifeCheck.gml</script>
+      <script>scripts\CheckHit.gml</script>
+      <script>scripts\Death.gml</script>
+    </scripts>
+    <scripts name="Pathing">
+      <script>scripts\ReturnToPath.gml</script>
+      <script>scripts\CloseIn.gml</script>
+      <script>scripts\FullPatrol.gml</script>
+      <script>scripts\ReversePathPatrol.gml</script>
+    </scripts>
+    <scripts name="Special Attacks">
+      <script>scripts\BullCharge.gml</script>
+      <script>scripts\BullChargePush.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -86,15 +169,36 @@
         <object>objects\playerGeneric</object>
         <objects name="Avatars">
           <object>objects\cowAvatar</object>
+          <object>objects\pigAvatar</object>
+          <object>objects\chickenAvatar</object>
+          <object>objects\bullAvatar</object>
+        </objects>
+        <objects name="Selectors">
+          <object>objects\selectorGeneric</object>
+          <object>objects\cowSelectInfo</object>
+          <object>objects\cowSelect</object>
+          <object>objects\bullSelectInfo</object>
+          <object>objects\bullSelect</object>
+          <object>objects\chickenSelectInfo</object>
+          <object>objects\chickenSelect</object>
+          <object>objects\pigSelectInfo</object>
+          <object>objects\pigSelect</object>
         </objects>
       </objects>
       <objects name="Neutral">
         <object>objects\neutralGeneric</object>
+        <object>objects\mouse</object>
       </objects>
       <objects name="Enemies">
         <object>objects\enemyGeneric</object>
         <objects name="Test">
           <object>objects\detector1</object>
+        </objects>
+        <objects name="Human">
+          <object>objects\farmer</object>
+          <object>objects\farmerPatrol</object>
+          <object>objects\farmerBackPatrol</object>
+          <object>objects\farmerSpin</object>
         </objects>
       </objects>
     </objects>
@@ -107,27 +211,85 @@
       <object>objects\projectileGeneric</object>
       <objects name="Bullets">
         <object>objects\bulletSmall1</object>
+        <object>objects\buckshot1</object>
+      </objects>
+      <objects name="Livestock Naturals">
+        <object>objects\chickenGun</object>
+        <object>objects\cowMilk1</object>
+        <object>objects\pigMud1</object>
+      </objects>
+      <objects name="Missiles">
+        <object>objects\missileBlue</object>
       </objects>
     </objects>
-    <objects name="Collision">
-      <object>objects\collisionGeneric</object>
-      <object>objects\wallCollide</object>
+    <objects name="Menus">
+      <object>objects\menuGeneric</object>
+      <object>objects\bannerSplash</object>
+      <object>objects\newGame1</object>
+      <object>objects\quitGame1</object>
+      <object>objects\skipTutorial1</object>
+      <object>objects\levelSelect1</object>
+      <object>objects\characterSelectText1</object>
+      <object>objects\wasd</object>
+      <object>objects\resumeGame1</object>
+      <object>objects\tutorial1</object>
+      <object>objects\mainMenuWords1</object>
+      <object>objects\w1</object>
+      <object>objects\a1</object>
+      <object>objects\s1</object>
+      <object>objects\d1</object>
+      <object>objects\mouseFire1</object>
+      <object>objects\hearYou</object>
+      <object>objects\seeYou</object>
+      <object>objects\canHide</object>
+      <object>objects\moveQuietly</object>
+      <object>objects\lastSprint</object>
+      <object>objects\stranded</object>
+      <object>objects\haveFun</object>
+      <object>objects\escFinish</object>
+      <object>objects\farmWord1</object>
+      <object>objects\houseWord1</object>
+      <object>objects\boatWord1</object>
     </objects>
-    <objects name="Stealth">
-      <object>objects\stealthGeneric</object>
-      <object>objects\stealth1</object>
-      <object>objects\stealth2</object>
-      <object>objects\stealth3</object>
+    <objects name="Mechanics">
+      <object>objects\mechanicsGeneric</object>
+      <objects name="Collision">
+        <object>objects\collisionGeneric</object>
+        <object>objects\wallCollide</object>
+      </objects>
+      <objects name="Stealth">
+        <object>objects\stealthGeneric</object>
+        <object>objects\stealth1</object>
+        <object>objects\stealth2</object>
+        <object>objects\stealth3</object>
+      </objects>
+      <objects name="Levels">
+        <object>objects\levelsGeneric</object>
+        <object>objects\levelExit</object>
+        <object>objects\levelEnter</object>
+        <object>objects\mainMenuKill</object>
+      </objects>
+      <object>objects\patrolSpot</object>
     </objects>
+    <object>objects\boat1</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\prototypeExampleRoom</room>
-    <room>rooms\Stealth_Test_Room</room>
-    <room>rooms\room2</room>
-    <room>rooms\Starting_Pasture</room>
+    <room>rooms\mainMenu</room>
+    <room>rooms\characterSelect</room>
+    <room>rooms\basicControls</room>
+    <room>rooms\farm</room>
+    <room>rooms\house</room>
+    <room>rooms\finalLevel</room>
+    <room>rooms\levelSelectRoom</room>
+    <room>rooms\pauseMenu</room>
+    <rooms name="Deprecated">
+      <room>rooms\prototypeExampleRoom</room>
+      <room>rooms\Stealth_Test_Room</room>
+    </rooms>
+    <room>rooms\gameWin</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

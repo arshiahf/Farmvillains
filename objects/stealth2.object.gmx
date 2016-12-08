@@ -3,7 +3,7 @@
   <spriteName>stealth2Sprite</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1000018</depth>
+  <depth>99999999</depth>
   <persistent>0</persistent>
   <parentName>stealthGeneric</parentName>
   <maskName>&lt;undefined&gt;</maskName>

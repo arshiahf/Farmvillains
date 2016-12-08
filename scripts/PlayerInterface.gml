@@ -1,4 +1,4 @@
-var player = argument0;
+var player = self;
 
 // Methods for player input
 
@@ -16,13 +16,15 @@ var alt = keyboard_check(vk_alt)
 var ctrl = keyboard_check(vk_control)
 var shift = keyboard_check(vk_shift)
 
-// Gamepad deadzone
+var esc = keyboard_check(vk_escape)
 
+// Gamepad deadzone
+/*
 if gamepad_is_connected(0)
 {
     gamepad_set_axis_deadzone(0, 0.05);
 }
-
+*/
 if instance_exists(player)
 {
     // Player movement rates
@@ -35,6 +37,15 @@ if instance_exists(player)
     // Game functions for player input
     with player
     {
+        // Menu function
+        
+        if esc and room != pauseMenu and room != mainMenu
+        {
+            global.roomCurrent = room
+            room_persistent = true
+            room_goto(pauseMenu)
+        }
+    
         // Non-sneaking movement keyboard
     
         if (keyS or gamePadDown)

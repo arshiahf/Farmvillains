@@ -3,7 +3,7 @@
   <spriteName>collisionWall</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>1000019</depth>
+  <depth>9999999</depth>
   <persistent>0</persistent>
   <parentName>collisionGeneric</parentName>
   <maskName>&lt;undefined&gt;</maskName>
