@@ -5,7 +5,11 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\titleMusic</sound>
+    <sounds name="Music Tracks">
+      <sound>sound\titleMusic</sound>
+      <sound>sound\normalMusic</sound>
+      <sound>sound\stealthMusic</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Livestock">
@@ -22,6 +26,10 @@
       <sprites name="Pig">
         <sprite>sprites\pigStanding</sprite>
         <sprite>sprites\pigWalking</sprite>
+      </sprites>
+      <sprites name="Mouse">
+        <sprite>sprites\mouseWalk</sprite>
+        <sprite>sprites\mouseStand</sprite>
       </sprites>
     </sprites>
     <sprites name="Enemies">
@@ -57,6 +65,24 @@
       <sprite>sprites\characterSelectText</sprite>
       <sprite>sprites\wasdText</sprite>
       <sprite>sprites\resumeGame</sprite>
+      <sprite>sprites\tutorial</sprite>
+      <sprite>sprites\mainMenuWords</sprite>
+      <sprite>sprites\w</sprite>
+      <sprite>sprites\a</sprite>
+      <sprite>sprites\s</sprite>
+      <sprite>sprites\d</sprite>
+      <sprite>sprites\fire</sprite>
+      <sprite>sprites\hear</sprite>
+      <sprite>sprites\see</sprite>
+      <sprite>sprites\hide</sprite>
+      <sprite>sprites\quietly</sprite>
+      <sprite>sprites\sprint</sprite>
+      <sprite>sprites\dontSprint</sprite>
+      <sprite>sprites\fun</sprite>
+      <sprite>sprites\escOut</sprite>
+      <sprite>sprites\farmWord</sprite>
+      <sprite>sprites\houseWord</sprite>
+      <sprite>sprites\boatWord</sprite>
     </sprites>
     <sprites name="Mechanics">
       <sprites name="Stealth">
@@ -72,12 +98,14 @@
         <sprite>sprites\levelExitBox</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\boat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\stealthTileSet</background>
     <background>background\background1</background>
     <background>background\Barn</background>
     <background>background\titleScreen</background>
+    <background>background\fiji</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\stealthTestPath</path>
@@ -109,8 +137,6 @@
     </scripts>
     <scripts name="Interface">
       <script>scripts\PlayerInterface.gml</script>
-      <script>scripts\PlayerCameraCreate.gml</script>
-      <script>scripts\PlayerCameraFollow.gml</script>
     </scripts>
     <scripts name="Detection">
       <script>scripts\SoundProduce.gml</script>
@@ -127,6 +153,8 @@
     <scripts name="Pathing">
       <script>scripts\ReturnToPath.gml</script>
       <script>scripts\CloseIn.gml</script>
+      <script>scripts\FullPatrol.gml</script>
+      <script>scripts\ReversePathPatrol.gml</script>
     </scripts>
     <scripts name="Special Attacks">
       <script>scripts\BullCharge.gml</script>
@@ -159,6 +187,7 @@
       </objects>
       <objects name="Neutral">
         <object>objects\neutralGeneric</object>
+        <object>objects\mouse</object>
       </objects>
       <objects name="Enemies">
         <object>objects\enemyGeneric</object>
@@ -167,6 +196,9 @@
         </objects>
         <objects name="Human">
           <object>objects\farmer</object>
+          <object>objects\farmerPatrol</object>
+          <object>objects\farmerBackPatrol</object>
+          <object>objects\farmerSpin</object>
         </objects>
       </objects>
     </objects>
@@ -200,6 +232,24 @@
       <object>objects\characterSelectText1</object>
       <object>objects\wasd</object>
       <object>objects\resumeGame1</object>
+      <object>objects\tutorial1</object>
+      <object>objects\mainMenuWords1</object>
+      <object>objects\w1</object>
+      <object>objects\a1</object>
+      <object>objects\s1</object>
+      <object>objects\d1</object>
+      <object>objects\mouseFire1</object>
+      <object>objects\hearYou</object>
+      <object>objects\seeYou</object>
+      <object>objects\canHide</object>
+      <object>objects\moveQuietly</object>
+      <object>objects\lastSprint</object>
+      <object>objects\stranded</object>
+      <object>objects\haveFun</object>
+      <object>objects\escFinish</object>
+      <object>objects\farmWord1</object>
+      <object>objects\houseWord1</object>
+      <object>objects\boatWord1</object>
     </objects>
     <objects name="Mechanics">
       <object>objects\mechanicsGeneric</object>
@@ -217,8 +267,11 @@
         <object>objects\levelsGeneric</object>
         <object>objects\levelExit</object>
         <object>objects\levelEnter</object>
+        <object>objects\mainMenuKill</object>
       </objects>
+      <object>objects\patrolSpot</object>
     </objects>
+    <object>objects\boat1</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
@@ -226,12 +279,17 @@
   <rooms name="rooms">
     <room>rooms\mainMenu</room>
     <room>rooms\characterSelect</room>
-    <room>rooms\prototypeExampleRoom</room>
-    <rooms name="Tutorial">
-      <room>rooms\basicControls</room>
-    </rooms>
-    <room>rooms\Stealth_Test_Room</room>
+    <room>rooms\basicControls</room>
+    <room>rooms\farm</room>
+    <room>rooms\house</room>
+    <room>rooms\finalLevel</room>
+    <room>rooms\levelSelectRoom</room>
     <room>rooms\pauseMenu</room>
+    <rooms name="Deprecated">
+      <room>rooms\prototypeExampleRoom</room>
+      <room>rooms\Stealth_Test_Room</room>
+    </rooms>
+    <room>rooms\gameWin</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

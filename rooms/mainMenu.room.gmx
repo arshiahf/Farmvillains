@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>16384</colour>
   <showcolour>-1</showcolour>
-  <code>audio_play_sound(titleMusic, 10, true)</code>
+  <code>audio_stop_all()
+audio_play_sound(titleMusic, 10, true)
+global.mainMenuTime = false</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

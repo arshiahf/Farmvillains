@@ -8,13 +8,13 @@ if instance_exists(playerGeneric)
     if !collision_line(enemy.x, enemy.y, player.x, player.y, collisionGeneric, true, true)
     {
         // Set sight cone
-        var coneLeft = image_angle + 60;
+        var coneLeft = image_angle + global.visCone;
         if coneLeft > 359
         {
             coneLeft =  coneLeft - 359;
         }
         
-        var coneRight = image_angle - 60;
+        var coneRight = image_angle - global.visCone;
         if coneRight < 0
         {
             coneRight = coneRight + 359;

@@ -65,7 +65,7 @@ instance_create(newX, newY, levelEnter)</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="detector1" x="512" y="448" name="inst_B6F592D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="detector1" x="160" y="96" name="inst_B6F592D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="176" y="432" name="inst_9C1AFDEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="208" y="560" name="inst_2208FEE6" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="wallCollide" x="176" y="688" name="inst_EF0272CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -107,6 +107,18 @@ instance_create(newX, newY, levelEnter)</code>
     <instance objName="stealth3" x="608" y="384" name="inst_98D7C3B9" locked="0" code="" scaleX="2.06451606750488" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
     <instance objName="stealth2" x="672" y="384" name="inst_7C112003" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="stealth1" x="736" y="384" name="inst_B6F85E53" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="farmer" x="416" y="448" name="inst_D0800031" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="levelExit" x="512" y="64" name="inst_38CC2C7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mouse" x="448" y="480" name="inst_CC5B4E59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mouse" x="480" y="384" name="inst_73CD6EB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mouse" x="416" y="352" name="inst_6927AC45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mouse" x="288" y="352" name="inst_0DF6E4AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mouse" x="288" y="448" name="inst_0D730085" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mouse" x="352" y="544" name="inst_DAA55F91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wallCollide" x="448" y="496" name="inst_40D9DBEA" locked="0" code="" scaleX="5.25" scaleY="0.25" colour="4294967295" rotation="0"/>
+    <instance objName="wallCollide" x="528" y="416" name="inst_D4BD4C95" locked="0" code="" scaleX="0.25" scaleY="5.25" colour="4294967295" rotation="0"/>
+    <instance objName="wallCollide" x="536" y="336" name="inst_A8CC454B" locked="0" code="" scaleX="0.75" scaleY="0.25" colour="4294967295" rotation="0"/>
+    <instance objName="wallCollide" x="368" y="504" name="inst_CCCA6A3E" locked="0" code="" scaleX="0.25" scaleY="0.75" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="stealthTileSet" x="0" y="0" w="32" h="32" xo="32" yo="0" id="10001771" name="inst_1DBE034C" depth="1000020" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -3000,6 +3012,17 @@ instance_create(newX, newY, levelEnter)</code>
     <tile bgName="stealthTileSet" x="768" y="448" w="32" h="32" xo="0" yo="32" id="10004510" name="inst_34440BAD" depth="1000017" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="stealthTileSet" x="768" y="416" w="32" h="32" xo="0" yo="32" id="10004511" name="inst_1D673303" depth="1000017" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="stealthTileSet" x="768" y="384" w="32" h="32" xo="0" yo="32" id="10004512" name="inst_58D05737" depth="1000017" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="384" y="480" w="32" h="32" xo="0" yo="96" id="10006937" name="inst_B267D97B" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="416" y="480" w="32" h="32" xo="0" yo="96" id="10006938" name="inst_976D8CD6" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="448" y="480" w="32" h="32" xo="0" yo="96" id="10006939" name="inst_24876805" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="480" y="480" w="32" h="32" xo="0" yo="96" id="10006940" name="inst_2E524E12" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="512" y="480" w="32" h="32" xo="160" yo="96" id="10006941" name="inst_030A2E7D" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="512" y="448" w="32" h="32" xo="32" yo="64" id="10006942" name="inst_10DE96B3" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="512" y="416" w="32" h="32" xo="32" yo="64" id="10006943" name="inst_6C208A9E" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="512" y="384" w="32" h="32" xo="32" yo="64" id="10006944" name="inst_5E7A81B4" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="512" y="352" w="32" h="32" xo="32" yo="64" id="10006945" name="inst_03064423" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="352" y="480" w="32" h="32" xo="128" yo="64" id="10006950" name="inst_E5AD23B5" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background1" x="512" y="320" w="32" h="32" xo="128" yo="64" id="10006951" name="inst_402E731F" depth="1000016" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

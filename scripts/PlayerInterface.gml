@@ -1,4 +1,4 @@
-var player = argument0;
+var player = self;
 
 // Methods for player input
 
@@ -42,7 +42,7 @@ if instance_exists(player)
         if esc and room != pauseMenu and room != mainMenu
         {
             global.roomCurrent = room
-            room.room_persistent = true
+            room_persistent = true
             room_goto(pauseMenu)
         }
     

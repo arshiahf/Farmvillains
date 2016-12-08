@@ -130,7 +130,6 @@ mainGunDeathTimer = 9;
           <argument>
             <kind>1</kind>
             <string>InheritEvents();
-PlayerInterface(self);
 SpriteMovementChange(self, chickenWalk, chickenStand)
 image_angle = direction
 </string>

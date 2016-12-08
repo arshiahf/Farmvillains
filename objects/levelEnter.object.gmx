@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>instance_create(x, y, global.playerAvatar)
+global.enemiesAlerted = 0;
 </string>
           </argument>
         </arguments>

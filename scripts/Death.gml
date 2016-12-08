@@ -1,4 +1,10 @@
-if instance_exists(playerGeneric)
+var parent = object_get_parent(self.object_index)
+
+if instance_exists(playerGeneric) and parent == playerGeneric
 {
-    room.room_persistent = false
+    room_persistent = false
+}
+else if parent == enemyGeneric
+{
+    global.enemiesAlerted--
 }
